@@ -33,4 +33,5 @@ From: ubuntu:16.04
     tar -xvzf sratoolkit.current-ubuntu64.tar.gz
      
     ###S3CMD
-    apt-get install s3cmd
+    apt-get -y upgrade
+	apt-get install s3cmd
