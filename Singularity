@@ -34,4 +34,5 @@ From: ubuntu:16.04
      
     ###S3CMD
     apt-get -y upgrade
-	apt-get install s3cmd
+apt-get -y install python-setuptools	
+apt-get install s3cmd
