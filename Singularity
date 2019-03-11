@@ -34,5 +34,8 @@ From: ubuntu:16.04
      
     ###S3CMD
     apt-get -y upgrade
-apt-get -y install python-setuptools	
-apt-get install s3cmd
+apt-get -y install python-setuptools
+wget http://netix.dl.sourceforge.net/project/s3tools/s3cmd/1.6.0/s3cmd-1.6.0.tar.gz
+tar xvfz s3cmd-1.6.0.tar.gz
+cd s3cmd-1.6.0
+sudo python setup.py install
