@@ -32,4 +32,5 @@ From: ubuntu:16.04
     wget http://ftp-trace.ncbi.nlm.nih.gov/sra/sdk/current/sratoolkit.current-ubuntu64.tar.gz
     tar -xvzf sratoolkit.current-ubuntu64.tar.gz
      
-
+    ###S3CMD
+    apt-get install s3cmd
