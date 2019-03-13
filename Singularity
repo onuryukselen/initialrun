@@ -29,7 +29,13 @@ From: ubuntu:16.04
     ### SRA-toolkit
     mkdir /data && cd /data
     mkdir -p /project /nl /share 
-    wget http://ftp-trace.ncbi.nlm.nih.gov/sra/sdk/current/sratoolkit.current-ubuntu64.tar.gz
-    tar -xvzf sratoolkit.current-ubuntu64.tar.gz
+    wget https://ftp-trace.ncbi.nlm.nih.gov/sra/sdk/2.9.4/sratoolkit.2.9.4-ubuntu64.tar.gz
+    tar -xvzf sratoolkit.2.9.4-ubuntu64.tar.gz
      
-
+    ###S3CMD
+    apt-get -y upgrade
+    apt-get -y install python-setuptools
+    wget http://netix.dl.sourceforge.net/project/s3tools/s3cmd/1.6.0/s3cmd-1.6.0.tar.gz
+    tar xvfz s3cmd-1.6.0.tar.gz
+    cd s3cmd-1.6.0
+    python setup.py install
