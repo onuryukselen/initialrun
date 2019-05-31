@@ -7,7 +7,7 @@ From: ubuntu:16.04
     Version v1.0
 
 %environment
-    PATH=$PATH:/bin:/sbin:/data/sratoolkit.2.9.4-ubuntu64/bin
+    PATH=$PATH:/bin:/sbin:/data/sratoolkit.2.9.6-1-ubuntu64/bin
     export PATH
 
 %post
@@ -29,8 +29,8 @@ From: ubuntu:16.04
     ### SRA-toolkit
     mkdir /data && cd /data
     mkdir -p /project /nl /share 
-    wget https://ftp-trace.ncbi.nlm.nih.gov/sra/sdk/2.9.4/sratoolkit.2.9.4-ubuntu64.tar.gz
-    tar -xvzf sratoolkit.2.9.4-ubuntu64.tar.gz
+    wget https://ftp-trace.ncbi.nlm.nih.gov/sra/sdk/2.9.6-1/sratoolkit.2.9.6-1-ubuntu64.tar.gz
+    tar -xvzf sratoolkit.2.9.6-1-ubuntu64.tar.gz
      
     ###S3CMD
     apt-get -y upgrade
