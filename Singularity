@@ -7,7 +7,7 @@ From: ubuntu:16.04
     Version v1.0
 
 %environment
-    PATH=$PATH:/bin:/sbin:/data/sratoolkit.2.9.6-1-ubuntu64/bin
+    PATH=$PATH:/bin:/sbin:/data/sratoolkit.2.9.6-1-ubuntu64/bin:/usr/local/gcloud/google-cloud-sdk/bin
     export PATH
 
 %post
@@ -35,7 +35,13 @@ From: ubuntu:16.04
     ###S3CMD
     apt-get -y upgrade
     apt-get -y install python-setuptools
+    pip install python-dateutil==2.2
     wget http://netix.dl.sourceforge.net/project/s3tools/s3cmd/1.6.0/s3cmd-1.6.0.tar.gz
     tar xvfz s3cmd-1.6.0.tar.gz
     cd s3cmd-1.6.0
     python setup.py install
+    
+    ### gcloud gsutils
+    curl https://dl.google.com/dl/cloudsdk/release/google-cloud-sdk.tar.gz > /tmp/google-cloud-sdk.tar.gz
+    mkdir -p /usr/local/gcloud && tar -C /usr/local/gcloud -xvf /tmp/google-cloud-sdk.tar.gz && /usr/local/gcloud/google-cloud-sdk/install.sh
+
